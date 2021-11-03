@@ -1,3 +1,10 @@
+/**
+* Laboration 1: Dynamisk minneshantering, RAII och merge, Programmeringsmetodik, dt047g
+* Niklas Nordström - nino1701
+* int_buffer.cpp, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-03
+* implementerings fil för int_buffer till labb 1
+*/
+
 #include "int_buffer.h"
 
 
@@ -60,6 +67,10 @@
 	const int* int_buffer::end() const
 	{
 		return nullptr;
+	}
+
+	void int_buffer::swap(int_buffer& lhs, int_buffer& rhs)
+	{
 	}
 
 	int_buffer::~int_buffer()

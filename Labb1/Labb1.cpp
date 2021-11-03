@@ -1,22 +1,18 @@
-// Labb1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/**
+* Laboration 1: Dynamisk minneshantering, RAII och merge, Programmeringsmetodik, dt047g
+* Niklas Nordström - nino1701
+* Labb1.cpp, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-03
+* Main-fil till labb 1
+*/
 
+#include <random>
+#include <chrono>
 #include <iostream>
 #include "int_buffer.h"
+
+void f(int_buffer buf);
 
 int main()
 {
     std::cout << "Hello World!\n";
-    void f(int_buffer buf);
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
