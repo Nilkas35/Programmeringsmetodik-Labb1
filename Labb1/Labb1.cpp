@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+#include "int_buffer.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+    void f(int_buffer buf);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
