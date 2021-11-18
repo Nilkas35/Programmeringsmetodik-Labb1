@@ -92,6 +92,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>4000000</StackReserveSize>
+      <StackCommitSize>4000000</StackCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -140,10 +142,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="int_buffer.cpp" />
+    <ClCompile Include="int_sorted.cpp" />
     <ClCompile Include="Labb1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="int_buffer.h" />
+    <ClInclude Include="int_sorted.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

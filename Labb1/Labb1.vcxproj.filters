@@ -21,9 +21,15 @@
     <ClCompile Include="int_buffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="int_sorted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="int_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="int_sorted.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,7 @@
 /**
 * Laboration 1: Dynamisk minneshantering, RAII och merge, Programmeringsmetodik, dt047g
 * Niklas Nordström - nino1701
-* int_buffer.cpp, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-16
+* int_buffer.cpp, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-17
 * implementerings fil för int_buffer till labb 1
 */
 
@@ -12,7 +12,7 @@ int_buffer::int_buffer(size_t size) : sz(size), value_ptr(new int[size])
 {
 }
 
-int_buffer::int_buffer(const int* source, size_t size) : sz(size), value_ptr(new int(size))
+int_buffer::int_buffer(const int* source, size_t size) : sz(size), value_ptr(new int[size])
 {
 	std::copy(source, source + size, begin());
 }
