@@ -1,7 +1,7 @@
 /**
 * Laboration 1: Dynamisk minneshantering, RAII och merge, Programmeringsmetodik, dt047g
 * Niklas Nordström - nino1701
-* Labb1.cpp, skapandedatum: 2021-11-17, Senaste redigering: 2021-11-17
+* Labb1.cpp, skapandedatum: 2021-11-17, Senaste redigering: 2021-11-25
 * Header-fil för "int_sorted.cpp" till labb 1
 */
 
@@ -16,9 +16,7 @@ private:
 	int_buffer buffer;
 public:
 
-	int_sorted();
-
-	int_sorted(size_t size); // size_t
+	int_sorted() = delete;
 
 	int_sorted(const int* source, size_t size);
 

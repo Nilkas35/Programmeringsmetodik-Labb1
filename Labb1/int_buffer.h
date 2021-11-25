@@ -1,7 +1,7 @@
 /**
 * Laboration 1: Dynamisk minneshantering, RAII och merge, Programmeringsmetodik, dt047g
 * Niklas Nordström - nino1701
-* int_buffer.h, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-16
+* int_buffer.h, skapandedatum: 2021-11-01, Senaste redigering: 2021-11-25
 * Header-fil för "int_buffer.cpp" till labb 1
 */
 
@@ -13,11 +13,11 @@
 class int_buffer {
 	int sz;
 	int* value_ptr;
-	void swap(int_buffer buffer1);
+	void swap(int_buffer& buffer);
 
 public:
 	int_buffer() = delete;
-	explicit int_buffer(size_t size); // size_t
+	explicit int_buffer(size_t size);
 
 
 	int_buffer(const int* source, size_t size);
@@ -37,11 +37,16 @@ public:
 	int* begin();
 	int* end();
 
-	[[nodiscard]] const int* begin() const;
-	[[nodiscard]] const int* end() const;
+	const int* begin() const;
+	const int* end() const;
+
+	size_t size() const;
+
+	bool is_sorted();
+
+	int_buffer selection_sort(int_buffer source);
 
 
-	[[nodiscard]] size_t size() const;
 };
 
 #endif // INT_BUFFER_H
