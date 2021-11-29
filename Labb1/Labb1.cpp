@@ -20,7 +20,7 @@ void compare_sort(int* arr, const int size);
 
 int main()
 {
-	const int size = 100000;
+	const int size = 5;
 
 	int arr[size]{};
 
@@ -65,7 +65,7 @@ void time_selection_sort(int* arr, const int size) {
 void time_merge_sort(int* arr, const int size)
 {
 	auto merge_start = std::chrono::steady_clock::now();
-	int_sorted sorted = int_sorted(arr, size);
+	auto sorted = int_sorted(arr, size);
 	auto merge_end = std::chrono::steady_clock::now();
 	auto merge_elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(merge_end - merge_start);
 	std::cout << "Merge sort time: " << merge_elapsed.count() << " ms\n";
@@ -83,7 +83,7 @@ void time_std_sort(int* arr, const int size)
 void compare_sort(int* arr, const int size)
 {
 	std::cout << "Selection sort\n";
-	time_selection_sort(arr, size);
+	//time_selection_sort(arr, size);
 	std::cout << "\nMerg sort\n";
 	time_merge_sort(arr, size);
 	std::cout << "\nstd sort\n";

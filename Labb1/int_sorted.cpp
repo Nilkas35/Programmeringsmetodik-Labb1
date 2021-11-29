@@ -25,8 +25,8 @@ size_t int_sorted::size() const
 
 const int* int_sorted::insert(int value)
 {
-	buffer = merge(int_sorted(&value, 1)).buffer; //insert value and do selection sort
-	return std::find(begin(), end(), value); //return index of where the value was added
+	buffer = merge(int_sorted(&value, 1)).buffer;
+	return std::find(begin(), end(), value);
 }
 
 const int* int_sorted::begin() const
