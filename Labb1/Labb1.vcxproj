@@ -124,6 +124,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <StackReserveSize>800000</StackReserveSize>
       <StackCommitSize>800000</StackCommitSize>
+      <HeapReserveSize>800000</HeapReserveSize>
+      <HeapCommitSize>800000</HeapCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

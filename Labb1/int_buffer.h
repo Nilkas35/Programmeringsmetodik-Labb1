@@ -19,9 +19,7 @@ public:
 	int_buffer() = delete;
 	explicit int_buffer(size_t size);
 
-
 	int_buffer(const int* source, size_t size);
-
 
 	int_buffer(const int_buffer& rhs); // copy
 	int_buffer(int_buffer&& rhs) noexcept; // move

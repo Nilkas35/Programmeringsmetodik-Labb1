@@ -18,13 +18,15 @@ int_buffer::int_buffer(const int* source, size_t size) : sz(size), value_ptr(new
 	std::copy(source, source + size, begin());
 }
 
-int_buffer::int_buffer(const int_buffer& rhs) : int_buffer(rhs.sz)
+// copy constructor
+int_buffer::int_buffer(const int_buffer& rhs) : int_buffer(rhs.begin(), rhs.size())
 {
-	std::copy(rhs.value_ptr, rhs.value_ptr + sz, value_ptr);
 }
 
+// Move constructor
 int_buffer::int_buffer(int_buffer&& rhs) noexcept :value_ptr(nullptr), sz(0)
 {
+	swap(rhs);
 }
 
 int_buffer::~int_buffer()

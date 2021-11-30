@@ -9,11 +9,11 @@
 #include <iostream>
 #include "int_sorted.h"
 
-int_sorted::int_sorted(const int* source, size_t size) : buffer(int_buffer(source, size))
+int_sorted::int_sorted(const int* source, size_t size) : buffer(source, size)
 {
 	if (size > 1) {
 		std::cout << "Is buffer sorted before: " << buffer.is_sorted() << "\n";
-		*this = sort(begin(), end());
+		buffer = sort(begin(), end()).buffer;
 		std::cout << "Is buffer sorted after: " << buffer.is_sorted() << "\n";
 	}
 }
@@ -52,7 +52,7 @@ int_sorted int_sorted::sort(const int* begin, const int* end)
 
 int_sorted int_sorted::merge(const int_sorted& merge_with) const
 {
-	int_buffer merge_buffer = int_buffer(size() + merge_with.size());
+	auto merge_buffer = int_buffer(size() + merge_with.size());
 	const int* local_iterator = begin();
 	const int* merge_iterator = merge_with.begin();
 	int* result_iterator = merge_buffer.begin();
@@ -70,7 +70,7 @@ int_sorted int_sorted::merge(const int_sorted& merge_with) const
 		*result_iterator++ = *merge_iterator++;
 	}
 	int_sorted final_result = int_sorted(nullptr, 0);
-	final_result.buffer = std::move(merge_buffer);
+	final_result.buffer = merge_buffer;
 
 	return final_result;
 }
